@@ -55,7 +55,7 @@
     "autoload": {
         "psr-4": {
             "PhpOffice\\PhpSpreadsheet\\": "src/PhpSpreadsheet",
-            "mahavirvataliya\\excelheader\\":"src/ExcelHeader"
+            "mahavirvataliya\\ExcelHeader\\":"src/ExcelHeader"
         }
     },
     "autoload-dev": {
