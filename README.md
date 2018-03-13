@@ -19,7 +19,7 @@ There are Two methods
 > get all headers means get header from all sheet given by row number as same to all mean return that row as json object
 
 
-I Have Used https://github.com/PHPOffice/phpspreadsheet as read excel files please go for it if you want to develop
+I Have Used https://github.com/PHPOffice/phpspreadsheet as read excel files please go for it if you want to develop go for it.
 
 
 Add at Import Section
@@ -30,6 +30,8 @@ use it where you want to
 
 For Example
 For Uploading Excel file And getting headers or any row we use like this where xls is name parameter in file upload
+
+
 `public function upload(Request $request)
     {
         $request->xls;
