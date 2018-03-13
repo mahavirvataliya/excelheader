@@ -20,3 +20,35 @@ There are Two methods
 
 
 I Have Used https://github.com/PHPOffice/phpspreadsheet as read excel files please go for it if you want to develop
+
+
+Add at Import Section
+
+`use mahavirvataliya\ExcelHeader\ExcelHeader;`
+
+use it where you want to
+
+For Example
+For Uploading Excel file And getting headers or any row we use like this where xls is name parameter in file upload
+`public function upload(Request $request)
+    {
+        $request->xls;
+
+        if($request->hasFile('xls')) {
+
+            $file = $request->file('xls') ;
+
+            $fileName = $file->getClientOriginalName() ;
+            $destinationPath = public_path() ;
+            $file->move($destinationPath,$fileName);
+
+            $rownno = $request->rowno==null?1:$request->rowno;
+            $rows =  ExcelHeader::getExcelHeader(public_path().'/'.$fileName,$rownno);
+            return view('excelfile',compact('rows'));
+        }
+        else
+        {
+            $rows=[];
+            return view('excelfile',compact('rows'));
+        }
+    }`
