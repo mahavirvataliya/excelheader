@@ -17,3 +17,6 @@ There are Two methods
 `getAllSheetExcelHeader($filepath,$rowno=1)`
 
 > get all headers means get header from all sheet given by row number as same to all mean return that row as json object
+
+
+I Have Used https://github.com/PHPOffice/phpspreadsheet as read excel files please go for it if you want to develop
