@@ -32,10 +32,9 @@ For Example
 For Uploading Excel file And getting headers or any row we use like this where xls is name parameter in file upload
 
 
-`public function upload(Request $request)
+    public function upload(Request $request)
     {
         $request->xls;
-
         if($request->hasFile('xls')) {
 
             $file = $request->file('xls') ;
@@ -53,4 +52,4 @@ For Uploading Excel file And getting headers or any row we use like this where x
             $rows=[];
             return view('excelfile',compact('rows'));
         }
-    }`
+    }
