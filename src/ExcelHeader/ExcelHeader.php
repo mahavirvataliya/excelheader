@@ -25,6 +25,8 @@ class ExcelHeader
                 }
                 $rows[] = $cells;
             }
+            $spreadsheet->disconnectWorksheets();
+            unset($spreadsheet);
         }
         catch (Exception $exception)
         {
@@ -54,13 +56,12 @@ class ExcelHeader
                     $rows[] = $cells;
                 }
             }
-            return json_encode($rows);
+            $spreadsheet->disconnectWorksheets();
+            unset($spreadsheet);
             } catch (Exception $exception)
-        {
-            die($exception);
-        }
+            {
+                die($exception);
+            }
         return json_encode($rows);
-
-
     }
 }
